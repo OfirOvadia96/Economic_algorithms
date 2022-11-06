@@ -3,11 +3,22 @@
 
 class Agent():
 
-     """
+    """
     INPUT : the index of an option.
     OUTPUT: the value of the option to the agent
     """
-    OptionVal = {} # option-int : value-float
+    _OptionVal = {} # option-int : value-float
+    
+    def __init__(self):
+      self.OptionVal = dict()
+
+    # getter method
+    def value(self, option:int) -> float:
+        return self.OptionVal[option]
+      
+    # setter method
+    def setOption(self, option:int, value:float):
+        self.OptionVal[option] = value
    
 
 
@@ -28,10 +39,10 @@ def isParetoImprovement(agents:list, option1:int, option2:int)->bool:
     #True - Option 1 holds a higher value, False - Option 1 doesn't holds a higher value then 2
     flag = false
     for agent in agents :
-        if agent.OptionVal[option1] < agent.OptionVal[option2]:
+        if agent.value(option1) < agent.value(option2):
             return False
 
-        if agent.OptionVal[option1] > agent.OptionVal[option2]:
+        if agent.value(option1) > agent.value(option2):
             flag = True
 
         #elif : equals then nothing..

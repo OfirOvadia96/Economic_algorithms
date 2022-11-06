@@ -14,15 +14,15 @@ class Agent():
 def isParetoImprovement(agents:list, option1:int, option2:int)->bool:
     '''
     Description:
-    A function that checks whether option 1 is a Pareto improvement of option 2
+        A function that checks whether option 1 is a Pareto improvement of option 2
     Param :
-    List of value agents
-    option1(int) - An index that points to the attributed value of this option according to that agent
-    option2(int) - An index that points to the attributed value of this option according to that agent
+        List of value agents
+        option1(int) - An index that points to the attributed value of this option according to that agent
+        option2(int) - An index that points to the attributed value of this option according to that agent
     Return:
-    True - If option 1 is a detail improvement of option 2
-    If there is at least one large value and all other values are equal or greater in option 1 than option 2
-    Otherwise false
+        True - If option 1 is a detail improvement of option 2
+        If there is at least one large value and all other values are equal or greater in option 1 than option 2
+        Otherwise false
     '''
     #Denotes one or more agents option 1 gives it a higher value than option 2
     #True - Option 1 holds a higher value, False - Option 1 doesn't holds a higher value then 2
@@ -47,8 +47,12 @@ def isParetoImprovement(agents:list, option1:int, option2:int)->bool:
 def isParetoOptimal(agents:list, option:int, allOptions:list)->bool:
     '''
     Description:
-    A function that checks whether an option is Pareto efficient
-    
+        A function that checks whether an option is Pareto efficient
+    Param:
+        List of value agents
+    Return:
+        True - If none of the other options is a Pareto improvement of the single option
+        Otherwise false
     '''
 
     for LoopOption in allOptions:

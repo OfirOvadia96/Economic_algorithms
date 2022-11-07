@@ -12,4 +12,4 @@
  <p align="center"> Knowing economic algorithms, means -> implementing algorithms while taking into account the desires and values that are important to other people, such as: fairness and utility.
  </p>
  
- <p align="center"> Credit: Dr erel segal-halevi </p>
+ <p align="center"> Credit: Dr Erel Segal-Halevi </p>

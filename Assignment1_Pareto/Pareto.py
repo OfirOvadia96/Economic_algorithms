@@ -1,5 +1,3 @@
-#effective pareto
-
 
 class Agent():
 

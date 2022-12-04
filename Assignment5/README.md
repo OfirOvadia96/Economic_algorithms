@@ -1,4 +1,17 @@
-<h1 align="center"> Asssignment5 </h1>
+<h1 align="center"> Asssignment5 - Consumption graph </h1>
+
+<h3> What does the program do? </h3>
+
+Construction of a consumption graph from a given matrix
+
+<p> Checking whether there is a circle in the consumption graph </p>
+<p> If yes: returns one circle from the graph </p>
+<p> Otherwise: prints to the screen that there is no circle in the graph </p>
+
+<h3> Reference libraries: </h3>
+<p> networkx - https://networkx.org/ </p>
+
+<p> matplotlib - https://matplotlib.org/ </p>
 
 
 <h3 align="center"> Example1: </h3>

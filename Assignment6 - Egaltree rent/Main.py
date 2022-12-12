@@ -1,29 +1,10 @@
 from Algorithms import *
 
 if __name__ == '__main__':
-    # Construct an empty graph:
-    # graph=nx.Graph()
 
-    # # Add edges with weights:
-    # graph.add_edge('aya','martef' ,weight=2)
-    # graph.add_edge('aya','heder',weight=40)
-    # graph.add_edge('aya','salon' ,weight=35)
-
-    # graph.add_edge('batya','martef' ,weight=40)
-    # graph.add_edge('batya','heder',weight=3)
-    # graph.add_edge('batya','salon' ,weight=35)
-
-    # graph.add_edge('gila','martef' ,weight=20)
-    # graph.add_edge('gila','heder',weight=40)
-    # graph.add_edge('gila','salon' ,weight=4)
-
-    # print("Maximum-value matching: ", nx.max_weight_matching(graph))
-
-    # division = nx.max_weight_matching(graph)
-    # print(division)
-
-    # Example
-    # Pricing table:
+    # Example:
+    
+    # Pricing table
     pricing_matrix_example = [[40,30,40]
               ,[30,30,80]
               ,[20,10,60]]

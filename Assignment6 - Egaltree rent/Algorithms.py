@@ -55,21 +55,32 @@ def draw_egletre_graph(G:nx.Graph):
 
 def Finding_egalitarian_division(list_of_divisions:list[nx.Graph],rooms_names:list[str],Tenants_names:dict[str],
         how_much_was_the_price:dict):
-
+        
     benefit = 0
-    lowest_benefit = 9999999
-    what_graph_as_lowest_benefit_tenants = 0
+    lowest_benefits = []
+
     for index in range(len(list_of_divisions)):
+        tenant_with_the_lowest_benefit_in_the_division = 9999999
+
         for room_name in rooms_names:
             for Tenant_name in Tenants_names:
                 weight = list_of_divisions[index].get_edge_data(room_name,Tenant_name)
                 if weight is not None:
                     benefit = how_much_was_the_price[room_name] - weight["weight"] # how much is the value pricing - how much actually paid
-                    if lowest_benefit > benefit:
-                        lowest_benefit = benefit
-                        what_graph_as_lowest_benefit_tenants = index
-                    #print(weight["weight"])
+                    if tenant_with_the_lowest_benefit_in_the_division > benefit:
+                        tenant_with_the_lowest_benefit_in_the_division = benefit
+
+        lowest_benefits.append(tenant_with_the_lowest_benefit_in_the_division)
+    
+
+    graph_index = -1
+    number = 999999
+    for i in range(len(lowest_benefits)):
+        if lowest_benefits[i] < number:
+            number = lowest_benefits[i]
+            graph_index = i
 
 
 
-    return list_of_divisions[what_graph_as_lowest_benefit_tenants]
+
+    return list_of_divisions[graph_index]
